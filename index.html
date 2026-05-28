@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Goodwill Agent &mdash; Downloads</title>
-  <meta name="description" content="Download the Goodwill Agent and SolutionTestApp demo for Windows." />
+  <meta name="description" content="Download and install the Goodwill Agent and Solution Test App for Windows." />
   <style>
     :root {
       --bg: #0f1115;
@@ -34,12 +34,12 @@
 
     header.hero {
       text-align: center;
-      padding: 72px 20px 48px;
+      padding: 72px 20px 40px;
       border-bottom: 1px solid var(--border);
       background: radial-gradient(900px 400px at 50% -120px, #1a2a20 0%, transparent 70%);
     }
     .hero h1 { font-size: 2.6rem; margin: 0 0 12px; letter-spacing: -0.5px; }
-    .hero p.tag { color: var(--muted); font-size: 1.15rem; margin: 0 auto 28px; max-width: 620px; }
+    .hero p.tag { color: var(--muted); font-size: 1.15rem; margin: 0 auto; max-width: 620px; }
 
     .btn {
       display: inline-block;
@@ -47,26 +47,18 @@
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.05rem;
-      padding: 14px 28px;
+      font-size: 1.02rem;
+      padding: 12px 24px;
       border-radius: 10px;
       border: 1px solid #3b9163;
       transition: background .15s ease, transform .05s ease;
     }
     .btn:hover { background: var(--accent-hover); }
     .btn:active { transform: translateY(1px); }
-    .btn .sub { display: block; font-weight: 400; font-size: 0.8rem; opacity: 0.85; margin-top: 2px; }
-    .btn.secondary {
-      background: var(--panel-2);
-      border-color: var(--border);
-      color: var(--text);
-      font-size: 0.95rem;
-      padding: 10px 18px;
-    }
-    .btn.secondary:hover { background: #262d39; }
 
     section { padding: 44px 0; border-bottom: 1px solid var(--border); }
-    section h2 { font-size: 1.5rem; margin: 0 0 18px; }
+    section h2 { font-size: 1.5rem; margin: 0 0 6px; }
+    section p.lead { color: var(--muted); margin: 0 0 24px; }
 
     .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
@@ -74,18 +66,18 @@
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 22px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
     }
-    .card h3 { margin: 0 0 6px; font-size: 1.15rem; }
-    .card code.fname { color: #7fb89a; font-size: 0.85rem; }
-    .card p { color: var(--muted); margin: 10px 0 0; font-size: 0.95rem; }
+    .card h3 { margin: 0 0 4px; font-size: 1.25rem; }
+    .card .fname { color: #7fb89a; font-size: 0.82rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .card p { color: var(--muted); margin: 12px 0 20px; font-size: 0.95rem; flex: 1; }
+    .card .dl-btn { width: 100%; text-align: center; }
+    .card .size { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 10px; }
 
     ol.steps { counter-reset: step; list-style: none; padding: 0; margin: 0; }
-    ol.steps li {
-      position: relative;
-      padding: 0 0 18px 46px;
-      margin: 0;
-    }
+    ol.steps li { position: relative; padding: 0 0 18px 46px; margin: 0; }
     ol.steps li:before {
       counter-increment: step;
       content: counter(step);
@@ -105,6 +97,7 @@
       border-radius: 5px;
       padding: 1px 6px;
       font-size: 0.88em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     }
 
     .req { list-style: none; padding: 0; margin: 0; }
@@ -120,6 +113,7 @@
       font-size: 0.93rem;
     }
     .notice b { color: #f1dd9a; }
+    .notice + .notice { margin-top: 14px; }
 
     footer { text-align: center; padding: 36px 20px; color: var(--muted); font-size: 0.85rem; }
   </style>
@@ -129,41 +123,54 @@
   <header class="hero">
     <div class="wrap">
       <h1>Goodwill Agent</h1>
-      <p class="tag">A Windows desktop agent that drives the Solutions clothing-tag UI, bundled with a test app so you can try the full flow in one click.</p>
-      <a class="btn" href="https://github.com/yusenzh/GithubHost/releases/latest/download/GoodwillAgentBundle.zip">
-        Download for Windows
-        <span class="sub">GoodwillAgentBundle.zip &middot; ~149 MB &middot; Windows 10/11 (x64)</span>
-      </a>
+      <p class="tag">A Windows desktop agent that drives the Solutions clothing-tag UI, plus a test app to try the full flow. Download an installer below &mdash; it sets up the app and adds a Desktop shortcut.</p>
     </div>
   </header>
 
   <main class="wrap">
 
     <section>
-      <h2>What's in the download</h2>
-      <p style="color:var(--muted); margin-top:0;">Both apps are self-contained &mdash; <b style="color:var(--text)">no .NET install required</b>. Unzip and run.</p>
+      <h2>Downloads</h2>
+      <p class="lead">Pick an app. Each download is a Windows installer that sets up the app and creates a Desktop shortcut &mdash; no .NET install required.</p>
       <div class="cards">
+
         <div class="card">
           <h3>Goodwill Agent</h3>
-          <code class="fname">GoodwillAgent.exe</code>
-          <p>The agent. Runs a local HTTP receiver plus a dashboard, and drives the target app through the Windows UI Automation tree.</p>
+          <span class="fname">GoodwillAgentSetup.exe</span>
+          <p>The agent. Runs a local HTTP receiver plus a dashboard, and drives a target app through the Windows UI Automation tree.</p>
+          <a class="btn dl-btn" href="https://github.com/yusenzh/GithubHost/releases/latest/download/GoodwillAgentSetup.exe">Download installer</a>
+          <span class="size">~56 MB &middot; Windows 10/11 (64-bit)</span>
         </div>
+
         <div class="card">
           <h3>Solution Test App</h3>
-          <code class="fname">SolutionTestApp.exe</code>
+          <span class="fname">SolutionTestAppSetup.exe</span>
           <p>A WPF stand-in for the Solutions DGR clothing-tag screen, so you can watch the agent work without the real software.</p>
+          <a class="btn dl-btn" href="https://github.com/yusenzh/GithubHost/releases/latest/download/SolutionTestAppSetup.exe">Download installer</a>
+          <span class="size">~49 MB &middot; Windows 10/11 (64-bit)</span>
         </div>
+
       </div>
     </section>
 
     <section>
-      <h2>Quick start</h2>
+      <h2>How to install</h2>
       <ol class="steps">
-        <li>Download the zip above and <b>unzip it</b> somewhere (your Desktop is fine).</li>
-        <li>Double-click <code>start-demo.bat</code>. Two windows open side by side.</li>
-        <li>In the Goodwill Agent window, click <b>Execute</b> on the right-hand panel.</li>
+        <li>Click <b>Download installer</b> above for the app you want.</li>
+        <li>Open the downloaded <code>...Setup.exe</code>. If Windows shows a <i>"Windows protected your PC"</i> screen, click <b>More info &rarr; Run anyway</b> (see note below).</li>
+        <li>The installer sets the app up and adds a <b>Desktop shortcut</b> and Start Menu entry. No admin rights needed.</li>
+        <li>Launch the app from its <b>Desktop shortcut</b>.</li>
+      </ol>
+      <p style="color:var(--muted); margin:0;">To uninstall later, use <b>Settings &rarr; Apps &rarr; Installed apps</b>, or the Uninstall entry in the Start Menu.</p>
+    </section>
+
+    <section>
+      <h2>Trying the full demo</h2>
+      <p class="lead" style="margin-bottom:14px;">The agent drives the test app, so for the end-to-end demo install <b>both</b>, then:</p>
+      <ol class="steps">
+        <li>Launch <b>Solution Test App</b> first and leave it open.</li>
+        <li>Launch <b>Goodwill Agent</b> and click <b>Execute</b> on its dashboard.</li>
         <li>Watch the agent drive the test app: <code>Womens &rarr; Womens Coats &rarr; Better &rarr; L</code>.</li>
-        <li>To re-run, click <b>New ID + Timestamp</b>, then <b>Execute</b> again.</li>
       </ol>
     </section>
 
@@ -172,23 +179,23 @@
       <ul class="req">
         <li><b>OS:</b> Windows 10 or 11 (64-bit)</li>
         <li><b>Runtime:</b> None &mdash; both apps are self-contained</li>
-        <li><b>Disk:</b> ~350 MB unzipped</li>
+        <li><b>Admin rights:</b> Not required (installs per-user)</li>
       </ul>
     </section>
 
     <section style="border-bottom:none;">
-      <h2>Before you run it</h2>
+      <h2>Before you run the installer</h2>
       <div class="notice">
-        <b>Windows SmartScreen may warn you.</b> Because these apps aren't code-signed, Windows
-        may show a <i>&ldquo;Windows protected your PC&rdquo;</i> screen the first time. To proceed,
-        click <b>More info &rarr; Run anyway</b>. This is expected for unsigned apps.
+        <b>Windows SmartScreen may warn you.</b> Because these installers aren't code-signed, Windows
+        may show a <i>"Windows protected your PC"</i> screen the first time you run one. To proceed,
+        click <b>More info</b>, then <b>Run anyway</b>. This is expected for unsigned apps and is safe here.
       </div>
     </section>
 
   </main>
 
   <footer>
-    Goodwill Agent demo &middot; distributed via GitHub Releases
+    Goodwill Agent &middot; installers distributed via GitHub Releases
   </footer>
 
 </body>
