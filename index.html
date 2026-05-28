@@ -40,6 +40,18 @@
     }
     .hero h1 { font-size: 2.6rem; margin: 0 0 12px; letter-spacing: -0.5px; }
     .hero p.tag { color: var(--muted); font-size: 1.15rem; margin: 0 auto; max-width: 620px; }
+    .hero p.ver { margin: 20px 0 0; }
+    .vtag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: #8fd6ab;
+      border: 1px solid #2f5b41;
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
 
     .btn {
       display: inline-block;
@@ -124,6 +136,7 @@
     <div class="wrap">
       <h1>Goodwill Agent</h1>
       <p class="tag">A Windows desktop agent that drives the Solutions clothing-tag UI, plus a test app to try the full flow. Download an installer below &mdash; it sets up the app and adds a Desktop shortcut.</p>
+      <p class="ver"><span class="vtag">v<!--VER-->1.0<!--/VER--></span></p>
     </div>
   </header>
 
@@ -139,7 +152,7 @@
           <span class="fname">GoodwillAgentSetup.exe</span>
           <p>The agent. Runs a local HTTP receiver plus a dashboard, and drives a target app through the Windows UI Automation tree.</p>
           <a class="btn dl-btn" href="https://github.com/yusenzh/GithubHost/releases/latest/download/GoodwillAgentSetup.exe">Download installer</a>
-          <span class="size">~56 MB &middot; Windows 10/11 (64-bit)</span>
+          <span class="size">v<!--VER-->1.0<!--/VER--> &middot; ~56 MB &middot; Windows 10/11 (64-bit)</span>
         </div>
 
         <div class="card">
@@ -147,7 +160,7 @@
           <span class="fname">SolutionTestAppSetup.exe</span>
           <p>A WPF stand-in for the Solutions DGR clothing-tag screen, so you can watch the agent work without the real software.</p>
           <a class="btn dl-btn" href="https://github.com/yusenzh/GithubHost/releases/latest/download/SolutionTestAppSetup.exe">Download installer</a>
-          <span class="size">~49 MB &middot; Windows 10/11 (64-bit)</span>
+          <span class="size">v<!--VER-->1.0<!--/VER--> &middot; ~49 MB &middot; Windows 10/11 (64-bit)</span>
         </div>
 
       </div>
