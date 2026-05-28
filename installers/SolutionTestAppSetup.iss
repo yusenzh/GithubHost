@@ -1,9 +1,14 @@
 ; Inno Setup script for Solution Test App (per-user install, no admin required)
 #define MyAppName "Solution Test App"
-#define MyAppVersion "1.0"
+#ifndef MyAppVersion
+  #define MyAppVersion "1.0"
+#endif
 #define MyAppPublisher "Goodwill"
 #define MyAppExeName "SolutionTestApp.exe"
-#define MySourceDir "C:\Users\zhang\Projects\Goodwill\dist\GoodwillAgentBundle\SolutionTestApp"
+; MySourceDir is normally passed by build-release.ps1 via /DMySourceDir=...
+#ifndef MySourceDir
+  #define MySourceDir "C:\Users\zhang\Projects\Goodwill\dist\GoodwillAgentBundle\SolutionTestApp"
+#endif
 
 [Setup]
 AppId={{C7D2E840-3F19-4B6C-8A53-9D8E7F6A5B4C}

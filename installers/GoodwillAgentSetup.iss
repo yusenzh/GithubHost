@@ -1,9 +1,14 @@
 ; Inno Setup script for Goodwill Agent (per-user install, no admin required)
 #define MyAppName "Goodwill Agent"
-#define MyAppVersion "1.0"
+#ifndef MyAppVersion
+  #define MyAppVersion "1.0"
+#endif
 #define MyAppPublisher "Goodwill"
 #define MyAppExeName "GoodwillAgent.exe"
-#define MySourceDir "C:\Users\zhang\Projects\Goodwill\dist\GoodwillAgentBundle\GoodwillAgent"
+; MySourceDir is normally passed by build-release.ps1 via /DMySourceDir=...
+#ifndef MySourceDir
+  #define MySourceDir "C:\Users\zhang\Projects\Goodwill\dist\GoodwillAgentBundle\GoodwillAgent"
+#endif
 
 [Setup]
 AppId={{8F3A1C20-7B4E-4D9A-9E21-1A2B3C4D5E6F}
